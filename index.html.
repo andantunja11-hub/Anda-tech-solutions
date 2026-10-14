@@ -1,0 +1,526 @@
+index.html.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anda Tech Solutions | IT Support</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;   
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #071b38;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: bold;
+            color: #39c6ff;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #39c6ff;
+        }
+
+        .hero {
+            min-height: 480px;
+            background: linear-gradient(120deg, #071b38, #104b83);
+            color: white;
+            padding: 100px 8%;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: clamp(34px, 6vw, 55px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #39c6ff;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #e0eaf5;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00a8e8;
+            color: white;
+            text-decoration: none;
+            padding: 13px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #087bb2;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #071b38;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 40px;
+            color: #64748b;
+        }
+
+        .about {
+            background: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(220px, 1fr)
+            );
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 28px 22px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            border-bottom: 4px solid #00a8e8;
+            transition: transform 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .service-card h3 {
+            color: #0b315d;
+            margin-bottom: 10px;
+        }
+
+        .why {
+            background: #eaf3fc;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(200px, 1fr)
+            );
+            gap: 20px;
+            text-align: center;
+        }
+
+        .why-item {
+            padding: 20px;
+        }
+
+        .why-item h3 {
+            margin-bottom: 8px;
+            color: #0b315d;
+        }
+
+        .contact {
+            background: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(260px, 1fr)
+            );
+            gap: 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            font: inherit;
+        }
+
+        .contact-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        footer {
+            background: #071b38;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .hero {
+                padding: 75px 7%;
+            }
+
+            section {
+                padding: 55px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Anda Tech Solutions</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>
+                Your Technology.<br>
+                Our <span>Solution.</span>
+            </h1>
+
+            <p>
+                Reliable IT support, computer troubleshooting,
+                networking and technology solutions for businesses
+                and individuals.
+            </p>
+
+            <a href="#contact" class="btn">
+                Get IT Support
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Our Company</h2>
+
+        <p class="section-intro">
+            Technology made simple, reliable and accessible.
+        </p>
+
+        <p>
+            Anda Tech Solutions is an IT services company focused on
+            helping businesses and individuals solve technology
+            problems. We aim to provide dependable technical support,
+            practical solutions and professional customer service
+            to help our clients work with confidence.
+        </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2 class="section-title">Our IT Services</h2>
+
+        <p class="section-intro">
+            We help keep your computers, systems and networks running
+            smoothly.
+        </p>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="icon">💻</div>
+                <h3>Computer Support</h3>
+                <p>
+                    Computer formatting, Windows installation,
+                    application installation and PC troubleshooting.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🌐</div>
+                <h3>Network Support</h3>
+                <p>
+                    Network troubleshooting, connectivity checks
+                    and basic network configuration support.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🖥️</div>
+                <h3>Server Support</h3>
+                <p>
+                    Server troubleshooting, system checks and
+                    assistance with IT infrastructure.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">🔐</div>
+                <h3>User Account Management</h3>
+                <p>
+                    User account creation, Active Directory support,
+                    password resets and account unlocks.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">📞</div>
+                <h3>End-User Support</h3>
+                <p>
+                    Technical assistance, software issues,
+                    ticket follow-ups and user support.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon">⚙️</div>
+                <h3>Software Support</h3>
+                <p>
+                    Software installation, application troubleshooting
+                    and system maintenance assistance.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why">
+        <h2 class="section-title">Why Choose Us?</h2>
+
+        <p class="section-intro">
+            Your technology deserves dependable support.
+        </p>
+
+        <div class="why-grid">
+
+            <div class="why-item">
+                <h3>Reliable Support</h3>
+                <p>We work towards practical, dependable IT solutions.</p>
+            </div>
+
+            <div class="why-item">
+                <h3>Professional Service</h3>
+                <p>We value clear communication and customer care.</p>
+            </div>
+
+            <div class="why-item">
+                <h3>Problem Solving</h3>
+                <p>We help identify technical problems and resolve them.</p>
+            </div>
+
+            <div class="why-item">
+                <h3>Client Focused</h3>
+                <p>We aim to find solutions that meet your needs.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Us</h2>
+
+        <p class="section-intro">
+            Need IT assistance? Get in touch with Anda Tech Solutions.
+        </p>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h3>Let's Talk Technology</h3>
+
+                <p>
+                    Have a computer problem, network issue or IT
+                    support request? Send us a message.
+                </p>
+
+                <p><strong>Company:</strong><br>
+                    Anda Tech Solutions
+                </p>
+
+                <p><strong>Email:</strong><br>
+                    andantunja11@gmail.com
+                </p>
+
+                <p><strong>Phone:</strong><br>
+                    0739015649
+                </p>
+
+                <p><strong>Location:</strong><br>
+                    South Africa
+                </p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your full name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="How can we help you?"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Send Enquiry
+                </button>
+
+        
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Anda Tech Solutions</strong></p>
+        <p>Reliable IT Support. Practical Solutions.</p>
+
+        <p>
+            &copy; <span id="year"></span>
+            Anda Tech Solutions. All rights reserved.
+        </p>
+    </footer>
+
+    <script>
+        // Automatically update the copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Open an email draft when a visitor submits the form
+        document.getElementById("contactForm").addEventListener(
+            "submit",
+            function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const subject = document.getElementById("subject").value;
+                const message = document.getElementById("message").value;
+
+                // Replace this with your real business email
+                const businessEmail = "yourbusiness@example.com";
+
+                const emailSubject = encodeURIComponent(subject);
+                const emailBody = encodeURIComponent(
+                    "Name: " + name + "\n" +
+                    "Email: " + email + "\n\n" +
+                    "Message:\n" + message
+                );
+
+                window.location.href =
+                    "mailto:" + businessEmail +
+                    "?subject=" + emailSubject +
+                    "&body=" + emailBody;
+
+
+    
+        );
+    </script>
+
+</body>
+</html>
+
+
